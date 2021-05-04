@@ -58,19 +58,61 @@ export default {
 .safety {
   display: flex;
   margin-top: 30px;
+
+  @include media-md {
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  @include media-xs {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .safety-step {
   flex: 1;
   padding: 30px;
+  box-sizing: border-box;
   background-color: $element-bg;
   border-radius: 20px;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
 
+  @include media-md {
+    flex: none;
+    width: calc(50% - 20px);
+    margin: 0 10px;
+  }
+
+  @include media-sm {
+    padding: 20px;
+  }
+
+  @include media-xs {
+    width: 100%;
+    margin: 0;
+  }
+
   & + & {
     margin-left: 30px;
+
+    @include media-md {
+      margin-left: 10px;
+    }
+
+    @include media-xs {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+
+  &:nth-child(n + 3) {
+    @include media-md {
+      margin-top: 20px;
+    }
   }
 
   &__title {

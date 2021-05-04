@@ -85,6 +85,12 @@ export default {
   justify-content: flex-end;
   padding-bottom: 80px;
 
+  @include media-sm {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+  }
+
   &:not(:last-child) {
     &:before {
       content: "";
@@ -94,12 +100,28 @@ export default {
       width: 4px;
       height: calc(100% - 140px);
       background-image: url("../../assets/images/dash.svg");
+
+      @include media-sm {
+        top: initial;
+        bottom: 0;
+        height: 80px;
+      }
+    }
+  }
+
+  &:last-child {
+    @include media-sm {
+      padding-bottom: 0;
     }
   }
 
   &--reversed {
     flex-direction: row-reverse;
     text-align: right;
+
+    @include media-sm {
+      flex-direction: column;
+    }
   }
 
   &__img {
@@ -108,6 +130,12 @@ export default {
 
   &__content {
     width: calc(50% - 140px / 2 - 20px);
+
+    @include media-sm {
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+    }
   }
 
   &__title {

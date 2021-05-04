@@ -73,15 +73,34 @@ export default {
     font-weight: $bold;
     color: $light-gray;
     text-align: center;
+
+    @include media-md {
+      font-size: 58px;
+      line-height: 72px;
+    }
+
+    @include media-sm {
+      font-size: 48px;
+      line-height: 60px;
+    }
   }
 
   &__decoration {
     position: absolute;
     transition: transform 0.8s ease-in-out;
 
+    @include media-sm {
+      display: none;
+    }
+
     &--1 {
       top: 48px;
       left: 47px;
+
+      @include media-md {
+        top: 60px;
+        left: 6%;
+      }
 
       &.animate {
         transform: translate(218px, -2px) rotate(-60deg);
@@ -92,6 +111,11 @@ export default {
       bottom: 40px;
       left: 220px;
 
+      @include media-md {
+        bottom: 120px;
+        left: 30%;
+      }
+
       &.animate {
         transform: translate(158px, 20px) rotate(45deg);
       }
@@ -101,6 +125,11 @@ export default {
       top: 36px;
       right: 254px;
 
+      @include media-md {
+        top: 130px;
+        right: 20%;
+      }
+
       &.animate {
         transform: translate(-100px, 12px) rotate(60deg);
       }
@@ -109,6 +138,11 @@ export default {
     &--4 {
       bottom: 41px;
       right: 47px;
+
+      @include media-md {
+        bottom: 120px;
+        right: 6%;
+      }
 
       &.animate {
         transform: translate(-259px, 0) rotate(-45deg);

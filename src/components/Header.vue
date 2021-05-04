@@ -8,6 +8,7 @@
             alt="Pepemoon logo"
             width="308"
             height="84"
+            class="header__logo"
           />
         </router-link>
 
@@ -56,26 +57,84 @@ export default {
     display: flex;
     align-items: center;
     padding: 40px 0;
+
+    @include media-md {
+      flex-wrap: wrap;
+    }
+
+    @include media-sm {
+      padding: 20px 0;
+    }
+
+    @include media-xs {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @include media-sm {
+      width: 280px;
+      height: auto;
+    }
   }
 
   &__nav {
     margin-left: auto;
+
+    @include media-md {
+      order: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    @include media-sm {
+      margin: 20px -20px 0;
+      padding: 10px 20px;
+      background-color: $element-bg;
+    }
   }
 
   &__bn-btn {
     margin-left: 40px;
+
+    @include media-md {
+      margin-left: auto;
+    }
+
+    @include media-xs {
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }
 }
 
 .header-nav {
   display: flex;
 
+  @include media-sm {
+    justify-content: space-between;
+    max-width: 360px;
+    width: 100%;
+  }
+
   &__item {
     font-size: 18px;
     line-height: 22px;
 
+    @include media-sm {
+      font-size: 16px;
+    }
+
     & + & {
       margin-left: 40px;
+
+      @include media-sm {
+        margin-left: 10px;
+      }
     }
   }
 }

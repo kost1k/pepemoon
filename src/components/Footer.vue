@@ -109,10 +109,20 @@ export default {
   padding: 60px 0;
   background-color: $element-bg;
 
+  @include media-sm {
+    margin-top: 100px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-sm {
+      flex-direction: column;
+    }
 
     & + & {
       margin-top: 20px;
@@ -136,12 +146,23 @@ export default {
 .footer-nav {
   display: flex;
 
+  @include media-sm {
+    justify-content: space-between;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
   &__item {
     font-size: 14px;
     line-height: 20px;
 
     & + & {
       margin-left: 40px;
+
+      @include media-sm {
+        margin-left: 10px;
+      }
     }
   }
 }
@@ -149,9 +170,17 @@ export default {
 .footer-social {
   display: flex;
 
+  @include media-sm {
+    margin-top: 20px;
+  }
+
   &__item {
     & + & {
       margin-left: 40px;
+
+      @include media-sm {
+        margin-left: 20px;
+      }
     }
   }
 }

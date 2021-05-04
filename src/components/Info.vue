@@ -27,9 +27,11 @@
 
       <div class="info__row-wrap">
         <div class="info__row">
-          <div v-for="(item, i) in infoItems" :key="i" class="info-item">
-            <div class="info-item__value">{{ item.value }}</div>
-            <div class="info-item__label">{{ item.label }}</div>
+          <div class="info__item-wrap">
+            <div v-for="(item, i) in infoItems" :key="i" class="info-item">
+              <div class="info-item__value">{{ item.value }}</div>
+              <div class="info-item__label">{{ item.label }}</div>
+            </div>
           </div>
 
           <a href="#" class="info__btn">Live Chat</a>
@@ -83,9 +85,24 @@ export default {
   display: flex;
   align-items: center;
   padding-left: 20px;
+  padding-right: 210px;
   visibility: hidden;
   transform: translateY(100%);
   transition: transform 2s;
+
+  @include media-sm {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__img {
+    @include media-sm {
+      width: 140px;
+      height: auto;
+    }
+  }
 
   &__title {
     margin-left: 40px;
@@ -95,6 +112,20 @@ export default {
     color: $light-gray;
     transform: translateY(-75px);
     transition: transform 2s;
+
+    @include media-md {
+      margin-left: 30px;
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    @include media-sm {
+      margin-left: 0;
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 34px;
+      line-height: 42px;
+    }
   }
 
   &__moon-wrap {
@@ -108,6 +139,11 @@ export default {
   &__moon {
     will-change: transform;
     animation: bounce 1s ease-in-out infinite alternate;
+
+    @include media-sm {
+      width: 140px;
+      height: auto;
+    }
   }
 
   &.animate {
@@ -128,6 +164,10 @@ export default {
   padding-top: 30px;
   overflow: hidden;
 
+  @include media-sm {
+    padding-top: 0;
+  }
+
   &__row-wrap {
     position: relative;
     background-color: $main-bg;
@@ -142,6 +182,20 @@ export default {
     background-color: $element-bg;
     border-radius: 20px;
     z-index: 1;
+
+    @include media-sm {
+      flex-direction: column;
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-md {
+      flex-wrap: wrap;
+    }
   }
 
   &__btn {
@@ -162,6 +216,15 @@ export default {
     font-weight: $bold;
     color: $white;
 
+    @include media-lg {
+      width: 160px;
+    }
+
+    @include media-sm {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -180,10 +243,38 @@ export default {
 .info-item {
   position: relative;
   padding: 5px 0;
+  text-align: center;
+
+  @include media-md {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  @include media-sm {
+    flex: none;
+    width: 100%;
+  }
 
   & + & {
     margin-left: 45px;
     padding-left: 46px;
+
+    @include media-lg {
+      margin-left: 25px;
+      padding-left: 26px;
+    }
+
+    @include media-md {
+      margin-left: 0;
+      padding-left: 0;
+      margin: 0 5px;
+    }
+
+    @include media-sm {
+      margin: 0;
+      margin-top: 10px;
+      padding-top: 11px;
+      border-top: 1px solid #4f4f4f;
+    }
 
     &:before {
       content: "";
@@ -193,6 +284,18 @@ export default {
       width: 1px;
       height: 100%;
       background-color: #4f4f4f;
+
+      @include media-md {
+        content: none;
+      }
+    }
+
+    &:nth-child(n + 3) {
+      @include media-md {
+        margin-top: 10px;
+        padding-top: 11px;
+        border-top: 1px solid #4f4f4f;
+      }
     }
   }
 
@@ -208,7 +311,6 @@ export default {
     font-size: 12px;
     line-height: 15px;
     color: $gray;
-    text-align: center;
   }
 }
 

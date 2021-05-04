@@ -73,6 +73,27 @@ export default {
           nextEl: ".partners-slider-next",
           prevEl: ".partners-slider-prev",
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+          1240: {
+            slidesPerView: 5,
+            spaceBetween: 60,
+          },
+        },
       });
     },
   },
@@ -86,7 +107,7 @@ export default {
 .partners-slider-wrapper {
   position: relative;
   margin-top: 30px;
-  padding: 0 100px;
+  padding: 0 60px;
 }
 
 .partners-slider {

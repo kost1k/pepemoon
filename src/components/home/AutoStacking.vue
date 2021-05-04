@@ -56,8 +56,18 @@ export default {
   justify-content: space-between;
   align-items: center;
 
+  @include media-sm {
+    display: block;
+    margin-bottom: 50px;
+  }
+
   &__content {
     width: 450px;
+
+    @include media-sm {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__descr {
@@ -70,10 +80,33 @@ export default {
   &__motion {
     display: flex;
     align-items: center;
+    margin-left: 20px;
+
+    @include media-sm {
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 30px;
+    }
   }
 
   &__motion-state {
     position: relative;
+
+    @include media-sm {
+      max-width: 140px;
+      width: 35%;
+    }
+  }
+
+  &__motion-img {
+    @include media-md {
+      width: 140px;
+      height: auto;
+    }
+
+    @include media-sm {
+      width: 100%;
+    }
   }
 
   &__motion-title {
@@ -86,10 +119,29 @@ export default {
     line-height: 26px;
     color: $gray;
     text-align: center;
+
+    @include media-md {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    @include media-sm {
+      margin-top: 10px;
+    }
   }
 
   &__motion-arrow {
     margin: 0 80px;
+
+    @include media-md {
+      width: 80px;
+      height: auto;
+      margin: 0 40px;
+    }
+
+    @include media-sm {
+      margin: 0 20px;
+    }
   }
 }
 </style>

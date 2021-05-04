@@ -1,4 +1,4 @@
-# pepecoin
+# Pepemoon
 
 ## Project setup
 ```

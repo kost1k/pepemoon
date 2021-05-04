@@ -26,15 +26,22 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .section {
   & + & {
     margin-top: 100px;
     padding-top: 60px;
+
+    @include media-sm {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
   }
 
   &__title {
@@ -42,6 +49,16 @@ img {
     line-height: 49px;
     font-weight: $bold;
     color: $light-gray;
+
+    @include media-md {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    @include media-sm {
+      font-size: 34px;
+      line-height: 42px;
+    }
   }
 
   &__sub-title {
