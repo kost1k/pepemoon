@@ -20,10 +20,9 @@
 
       <div class="footer__row">
         <div class="footer__descr">
-          The SafeMoon Protocol is a community driven, fair launched DeFi Token.
+          PepeMoon is a deflationary DeFi Protocol token that strives in enhancing your Pepe Wealth.
           <br />
-          Three simple functions occur during each trade: Reflection, LP
-          Acquisition, & Burn.
+          An auto staking Wealth Yielding ecosystem which will run a NFT Marketplace and Payment terminal to enrich the masses.
         </div>
 
         <div class="footer-social">
@@ -51,7 +50,9 @@
       </div>
 
       <div class="footer__copyright">
-        © 2021 Pepecoin | All Rights Reserved.
+        contact@pepemoon.com / press@pepemoon.com
+        <br>
+        © 2021 PepeMoon | All Rights Reserved.
       </div>
     </div>
   </footer>
@@ -78,24 +79,12 @@ export default {
       ],
       socialLinks: [
         {
-          img: require("@/assets/images/social/youtube.svg"),
-          link: "#",
-        },
-        {
-          img: require("@/assets/images/social/twitch.svg"),
-          link: "#",
-        },
-        {
           img: require("@/assets/images/social/twitter.svg"),
-          link: "#",
+          link: "https://twitter.com/pepemooncom",
         },
         {
-          img: require("@/assets/images/social/steam.svg"),
-          link: "#",
-        },
-        {
-          img: require("@/assets/images/social/facebook.svg"),
-          link: "#",
+          img: require("@/assets/images/social/telegram.svg"),
+          link: "https://t.me/Pepemoon",
         },
       ],
     };

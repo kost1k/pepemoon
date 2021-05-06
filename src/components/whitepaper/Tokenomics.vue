@@ -7,19 +7,20 @@
         <div class="tokenomics__info">
           <div class="tokenomics__info-row">
             <span class="tokenomics__info-label">Total Supply: </span>
-            <span class="tokenomics__info-value">1,000,000,000,000,000</span>
+            <span class="tokenomics__info-value">100,000,000,000</span>
           </div>
 
           <div class="tokenomics__info-row">
             <span class="tokenomics__info-label">Burned Dev Tokens: </span>
-            <span class="tokenomics__info-value">223,000,000,000,000</span>
+            <span class="tokenomics__info-value">25,000,000,000</span>
           </div>
 
           <div class="tokenomics__info-row">
             <span class="tokenomics__info-label">Fair Launch Supply: </span>
-            <span class="tokenomics__info-value">777,000,000,000,000</span>
+            <span class="tokenomics__info-value">75,000,000,000</span>
           </div>
         </div>
+        <v-chart :options="polar" />
       </div>
     </div>
   </section>
@@ -27,7 +28,7 @@
 
 <script>
 export default {
-  name: "Tokenomics",
+  name: "Tekenomics",
 };
 </script>
 

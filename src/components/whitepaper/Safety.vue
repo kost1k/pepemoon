@@ -31,7 +31,7 @@ export default {
         {
           icon: require("@/assets/images/safety/step-1.svg"),
           title: "Step 1",
-          descr: "Dev burned all tokens in Dev Wallet prior to launch",
+          descr: "Developers will burn a big majority of all tokens so there are less PepeMoon in circulation",
         },
         {
           icon: require("@/assets/images/safety/step-2.svg"),
@@ -41,12 +41,12 @@ export default {
         {
           icon: require("@/assets/images/safety/step-3.svg"),
           title: "Step 3",
-          descr: "LP locked on DxLocker for 4 years",
+          descr: "LP locked on DxLocker for 24 months",
         },
         {
           icon: require("@/assets/images/safety/step-4.svg"),
           title: "Step 4",
-          descr: "LP generated with every trade and locked on Pancake",
+          descr: "LP generated with every trade and locked on Pancakeswap",
         },
       ],
     };

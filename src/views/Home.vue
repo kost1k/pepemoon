@@ -4,6 +4,7 @@
     <AutoStacking />
     <RoadMap />
     <BuyNow />
+    <Partners />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import Info from "@/components/Info.vue";
 import AutoStacking from "@/components/home/AutoStacking.vue";
 import RoadMap from "@/components/home/RoadMap.vue";
 import BuyNow from "@/components/home/BuyNow.vue";
+import Partners from "@/components/whitepaper/Partners.vue";
 
 export default {
   name: "Home",
@@ -20,6 +22,7 @@ export default {
     AutoStacking,
     RoadMap,
     BuyNow,
+    Partners,
   },
 };
 </script>
